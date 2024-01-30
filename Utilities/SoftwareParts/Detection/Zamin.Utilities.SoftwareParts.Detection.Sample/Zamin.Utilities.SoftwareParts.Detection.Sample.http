@@ -1,0 +1,6 @@
+@Zamin.Utilities.SoftwareParts.Detection.Sample_HostAddress = http://localhost:5145
+
+GET {{Zamin.Utilities.SoftwareParts.Detection.Sample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
