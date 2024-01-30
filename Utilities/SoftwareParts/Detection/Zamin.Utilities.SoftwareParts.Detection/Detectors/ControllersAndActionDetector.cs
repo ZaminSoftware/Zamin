@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Zamin.Utilities.SoftwareParts.Detection.DataModel;
+
 namespace Zamin.Utilities.SoftwareParts.Detection.Detectors;
 
 public class ControllersAndActionDetector(IActionDescriptorCollectionProvider actionDescriptorCollectionProvider)

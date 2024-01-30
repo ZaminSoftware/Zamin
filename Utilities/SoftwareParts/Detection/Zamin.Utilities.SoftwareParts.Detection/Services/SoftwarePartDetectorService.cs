@@ -3,7 +3,7 @@ using Zamin.Utilities.SoftwareParts.Detection.DataModel;
 using Zamin.Utilities.SoftwareParts.Detection.Detectors;
 using Zamin.Utilities.SoftwareParts.Detection.Options;
 
-namespace Zamin.Services;
+namespace Zamin.Utilities.SoftwareParts.Detection.Services;
 
 public class SoftwarePartDetectorService(SoftwarePartDetector softwarePartDetector,
                                          IOptions<SoftwarePartDetectionOption> softwarePartDetectorOption)
