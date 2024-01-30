@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Zamin.Utilities.Serilog.Registration.WorkerAppSample-a3188ea6-125d-4204-83df-a64e4a0b8e81</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zamin.Utilities.Serilog.Registration\Zamin.Utilities.Serilog.Registration.csproj" />
+  </ItemGroup>
+</Project>
