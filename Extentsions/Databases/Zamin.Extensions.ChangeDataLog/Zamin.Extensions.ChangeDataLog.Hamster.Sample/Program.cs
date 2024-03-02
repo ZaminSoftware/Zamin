@@ -16,12 +16,12 @@ builder.Services.AddZaminChageDatalogDalSql(c =>
 });
 builder.Services.AddZaminHamsterChageDatalog(c =>
 {
-    c.BusinessIdFieldName= "Id";
+    c.BusinessIdFieldName = "Id";
 });
 builder.Services.AddZaminWebUserInfoService(c =>
 {
     c.DefaultUserId = "1";
-},useFake:true);
+}, useFake: true);
 builder.Services.AddDbContext<HamsterTestContext>(c => c.UseSqlServer(cnnString).AddInterceptors(new AddChangeDataLogInterceptor()));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

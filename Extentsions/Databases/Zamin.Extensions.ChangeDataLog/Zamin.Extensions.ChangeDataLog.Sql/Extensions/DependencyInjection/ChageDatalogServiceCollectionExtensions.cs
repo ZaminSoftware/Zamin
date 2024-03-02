@@ -9,7 +9,7 @@ namespace Zamin.Extensions.DependencyInjection;
 public static class ChageDatalogServiceCollectionExtensions
 {
     public static IServiceCollection AddZaminChageDatalogDalSql(this IServiceCollection services, IConfiguration configuration)
-    {        
+    {
         services.AddScoped<IEntityChageInterceptorItemRepository, DapperEntityChageInterceptorItemRepository>();
         services.Configure<ChangeDataLogSqlOptions>(configuration);
         return services;

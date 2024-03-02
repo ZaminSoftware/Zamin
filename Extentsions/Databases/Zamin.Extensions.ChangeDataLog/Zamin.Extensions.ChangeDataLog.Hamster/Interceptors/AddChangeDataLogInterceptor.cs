@@ -1,11 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Zamin.Extensions.UsersManagement.Abstractions;
+using Microsoft.Extensions.Options;
 using Zamin.Extensions.ChangeDataLog.Abstractions;
 using Zamin.Extensions.ChangeDataLog.Sql.Options;
-using Microsoft.Extensions.Options;
+using Zamin.Extensions.UsersManagement.Abstractions;
 
 namespace Zamin.Infra.Data.Sql.Commands.Interceptors;
 
@@ -23,7 +23,7 @@ public class AddChangeDataLogInterceptor : SaveChangesInterceptor
         return base.SavingChangesAsync(eventData, result, cancellationToken);
     }
 
-    private  void SaveEntityChangeLogs(DbContextEventData eventData)
+    private void SaveEntityChangeLogs(DbContextEventData eventData)
     {
         var changeTracker = eventData.Context.ChangeTracker;
         var userInfoService = eventData.Context.GetService<IUserInfoService>();
@@ -68,8 +68,8 @@ public class AddChangeDataLogInterceptor : SaveChangesInterceptor
 
 
     }
- 
-    private  List<EntityEntry> GetChangedEntities(ChangeTracker changeTracker) =>
+
+    private List<EntityEntry> GetChangedEntities(ChangeTracker changeTracker) =>
        changeTracker.Entries()
            .Where(x => x.State == EntityState.Modified
            || x.State == EntityState.Added
