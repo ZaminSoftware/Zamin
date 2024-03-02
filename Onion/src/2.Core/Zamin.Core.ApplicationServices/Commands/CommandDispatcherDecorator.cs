@@ -7,7 +7,7 @@ public abstract class CommandDispatcherDecorator : ICommandDispatcher
 {
     #region Fields
     protected ICommandDispatcher _commandDispatcher;
-    public abstract int Order { get;}
+    public abstract int Order { get; }
     #endregion
 
     #region Constructors

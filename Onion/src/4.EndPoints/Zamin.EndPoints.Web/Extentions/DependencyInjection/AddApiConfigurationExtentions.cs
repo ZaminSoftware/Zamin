@@ -1,5 +1,4 @@
 ﻿using FluentValidation.AspNetCore;
-using System.Data.SqlClient;
 using Zamin.EndPoints.Web.Middlewares.ApiExceptionHandler;
 
 namespace Zamin.Extensions.DependencyInjection;
@@ -16,7 +15,7 @@ public static class AddApiConfigurationExtensions
 
     public static void UseZaminApiExceptionHandler(this IApplicationBuilder app)
     {
-        
+
         app.UseApiExceptionHandler(options =>
         {
             options.AddResponseDetails = (context, ex, error) =>

@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using Zamin.Utilities;
+using Zamin.Core.Contracts.ApplicationServices.Events;
 using Zamin.EndPoints.Web.Extensions;
 using Zamin.Extensions.Serializers.Abstractions;
-using Zamin.Core.Contracts.ApplicationServices.Events;
-using Zamin.Core.RequestResponse.Commands;
-using Zamin.Core.RequestResponse.Common;
-using Zamin.Core.RequestResponse.Queries;
+using Zamin.Utilities;
 
 namespace Zamin.EndPoints.Web.Controllers
 {

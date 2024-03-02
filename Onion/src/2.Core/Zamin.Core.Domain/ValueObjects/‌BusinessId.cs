@@ -36,7 +36,7 @@ public class BusinessId : BaseValueObject<BusinessId>
     protected override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;
-     }
+    }
 
     public static explicit operator string(BusinessId title) => title.Value.ToString();
     public static implicit operator BusinessId(string value) => new(value);

@@ -1,5 +1,4 @@
 ﻿using System.Linq.Expressions;
-using System.Security.Cryptography;
 using Zamin.Core.Domain.Entities;
 using Zamin.Core.Domain.ValueObjects;
 
@@ -8,7 +7,7 @@ namespace Zamin.Core.Contracts.Data.Commands;
 /// در صورتی که داده‌ها به صورت عادی ذخیره سازی شوند از این Interface جهت تعیین اعمال اصلی موجود در بخش ذخیره سازی داده‌ها استفاده می‌شود.
 /// </summary>
 /// <typeparam name="TEntity">کلاسی که جهت ذخیره سازی انتخاب می‌شود</typeparam>
-public interface ICommandRepository<TEntity,TId> : IUnitOfWork
+public interface ICommandRepository<TEntity, TId> : IUnitOfWork
     where TEntity : AggregateRoot<TId>
      where TId : struct,
           IComparable,

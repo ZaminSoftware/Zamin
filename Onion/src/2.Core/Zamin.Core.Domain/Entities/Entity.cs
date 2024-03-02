@@ -5,7 +5,7 @@ namespace Zamin.Core.Domain.Entities;
 /// کلاس پایه برای تمامی Entityها موجود در سامانه
 /// </summary>
 
-public abstract class Entity<TId>: IAuditableEntity
+public abstract class Entity<TId> : IAuditableEntity
           where TId : struct,
           IComparable,
           IComparable<TId>,
@@ -37,7 +37,7 @@ public abstract class Entity<TId>: IAuditableEntity
 
     #region Equality Check
     public bool Equals(Entity<TId>? other) => this == other;
-    public override bool Equals(object? obj)=>
+    public override bool Equals(object? obj) =>
          obj is Entity<TId> otherObject && Id.Equals(otherObject.Id);
 
     public override int GetHashCode() => Id.GetHashCode();

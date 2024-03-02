@@ -1,5 +1,4 @@
 ﻿using Zamin.Core.ApplicationServices.Commands;
-using Zamin.Core.Contracts.ApplicationServices.Commands;
 using Zamin.Core.RequestResponse.Commands;
 
 namespace MiniBlog.Endpoints.API.CustomDecorators;

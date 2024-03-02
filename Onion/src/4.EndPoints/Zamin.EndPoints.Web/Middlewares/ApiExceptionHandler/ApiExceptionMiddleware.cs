@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Net;
 using Zamin.Extensions.Serializers.Abstractions;
-using Zamin.Extensions.Logger.Abstractions;
 using Zamin.Extensions.Translations.Abstractions;
 
 namespace Zamin.EndPoints.Web.Middlewares.ApiExceptionHandler
@@ -15,7 +14,7 @@ namespace Zamin.EndPoints.Web.Middlewares.ApiExceptionHandler
         private readonly ITranslator _translator;
 
         public ApiExceptionMiddleware(ApiExceptionOptions options, RequestDelegate next,
-            ILogger<ApiExceptionMiddleware> logger, IJsonSerializer serializer,ITranslator translator
+            ILogger<ApiExceptionMiddleware> logger, IJsonSerializer serializer, ITranslator translator
             )
         {
             _next = next;

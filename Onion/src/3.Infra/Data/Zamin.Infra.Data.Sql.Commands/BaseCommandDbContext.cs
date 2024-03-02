@@ -3,8 +3,8 @@ using Microsoft.EntityFrameworkCore.Storage;
 using System.Globalization;
 using Zamin.Core.Domain.Toolkits.ValueObjects;
 using Zamin.Core.Domain.ValueObjects;
-using Zamin.Infra.Data.Sql.Commands.ValueConversions;
 using Zamin.Infra.Data.Sql.Commands.Extensions;
+using Zamin.Infra.Data.Sql.Commands.ValueConversions;
 
 namespace Zamin.Infra.Data.Sql.Commands;
 public abstract class BaseCommandDbContext : DbContext
@@ -55,7 +55,7 @@ public abstract class BaseCommandDbContext : DbContext
     {
         return Entry(entity).Property(propertyName).CurrentValue;
     }
-    
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

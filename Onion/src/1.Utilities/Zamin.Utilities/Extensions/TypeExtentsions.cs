@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Zamin.Utilities.Extensions
+﻿namespace Zamin.Utilities.Extensions
 {
     public static class TypeExtentsions
     {
 
-       public static bool IsSubclassOfRawGeneric(this Type toCheck, Type generic)
+        public static bool IsSubclassOfRawGeneric(this Type toCheck, Type generic)
         {
             while (toCheck != null && toCheck != typeof(object))
             {

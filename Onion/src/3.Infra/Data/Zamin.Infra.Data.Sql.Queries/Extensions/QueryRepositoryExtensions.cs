@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Zamin.Core.Contracts.ApplicationServices.Queries;
-using Zamin.Core.RequestResponse.Queries;
+﻿using Zamin.Core.RequestResponse.Queries;
 using Zamin.Utilities.Extensions;
 
 namespace Zamin.Infra.Data.Sql.Queries.Extensions;

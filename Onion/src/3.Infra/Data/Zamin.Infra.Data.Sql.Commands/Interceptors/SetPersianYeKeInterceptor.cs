@@ -3,7 +3,7 @@ using System.Data.Common;
 using Zamin.Infra.Data.Sql.Commands.Extensions;
 namespace Zamin.Infra.Data.Sql.Commands.Interceptors;
 
-public class SetPersianYeKeInterceptor: DbCommandInterceptor
+public class SetPersianYeKeInterceptor : DbCommandInterceptor
 {
     public override InterceptionResult<int> NonQueryExecuting(DbCommand command, CommandEventData eventData, InterceptionResult<int> result)
     {
