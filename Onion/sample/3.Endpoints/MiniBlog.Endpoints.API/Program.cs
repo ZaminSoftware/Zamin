@@ -12,5 +12,5 @@ SerilogExtensions.RunWithSerilogExceptionHandling(() =>
         o.ServiceName = builder.Configuration.GetValue<string>("ServiceName");
         o.ServiceVersion = builder.Configuration.GetValue<string>("ServiceVersion");
     }).ConfigureServices().ConfigurePipeline();
-    app.Run();
+    app.MigrateDatabase().Run();
 });

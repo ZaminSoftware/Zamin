@@ -9,9 +9,9 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
 	</ItemGroup>
-	
+
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\..\src\3.Infra\Data\Zamin.Infra.Data.Sql.Queries\Zamin.Infra.Data.Sql.Queries.csproj" />
+		<ProjectReference Include="..\..\..\..\src\3.Infra\Data\Zamin.Infra.Data.Sqlite.Commands\Zamin.Infra.Data.Sqlite.Commands.csproj" />
 		<ProjectReference Include="..\..\..\1.Core\MiniBlog.Core.Contracts\MiniBlog.Core.Contracts.csproj" />
 	</ItemGroup>
 

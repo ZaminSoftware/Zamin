@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MiniBlog.Core.Domain.Blogs.Entities;
-using Zamin.Extensions.Events.Outbox.Dal.EF;
+using Zamin.Infra.Data.Sqlite.Commands;
 
-namespace MiniBlog.Infra.Data.Sql.Commands.Common;
+namespace MiniBlog.Infra.Data.Sqlite.Commands.Common;
 
-public class MiniblogCommandDbContext(DbContextOptions<MiniblogCommandDbContext> options) : BaseOutboxCommandDbContext(options)
+public class MiniblogCommandDbContext(DbContextOptions<MiniblogCommandDbContext> options) : BaseCommandDbContext(options)
 {
     public DbSet<Blog> Blogs { get; set; }
 

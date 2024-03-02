@@ -10,7 +10,6 @@ using Zamin.Core.ApplicationServices.Events;
 using Zamin.Core.ApplicationServices.Queries;
 using Zamin.EndPoints.Web.Extensions.ModelBinding;
 using Zamin.Extensions.DependencyInjection;
-using Zamin.Extensions.Events.Outbox.Dal.EF.Interceptors;
 using Zamin.Infra.Data.Sql.Commands.Interceptors;
 
 namespace MiniBlog.Endpoints.API.Extentions;
@@ -26,7 +25,7 @@ public static class HostingExtensions
         builder.Services.AddSingleton<EventDispatcherDecorator, CustomEventDecorator>();
 
         //zamin
-        builder.Services.AddZaminApiCore("Zamin", "ZaminTemplate");
+        builder.Services.AddZaminApiCore("Zamin", "MiniBlog");
 
         //microsoft
         builder.Services.AddEndpointsApiExplorer();
@@ -52,6 +51,8 @@ public static class HostingExtensions
         //zamin
         builder.Services.AddZaminInMemoryCaching();
         //builder.Services.AddZaminSqlDistributedCache(configuration, "SqlDistributedCache");
+
+        var dataProvider = configuration.GetValue<string>("DataProvider") ?? string.Empty;
 
         //CommandDbContext
         builder.Services.AddDbContext<MiniblogCommandDbContext>(
@@ -115,5 +116,21 @@ public static class HostingExtensions
         //app.Services.GetService<SoftwarePartDetectorService>()?.Run();
 
         return app;
+    }
+
+    public static IHost MigrateDatabase(this IHost host)
+    {
+        var serviceScopeFactory = host.Services.GetRequiredService<IServiceScopeFactory>();
+
+        using var scope = serviceScopeFactory.CreateScope();
+
+        if (scope.ServiceProvider.GetRequiredService<IHostEnvironment>().IsDevelopment())
+        {
+            var dbContext = scope.ServiceProvider.GetRequiredService<MiniblogCommandDbContext>();
+
+            dbContext.Database.Migrate();
+        }
+
+        return host;
     }
 }

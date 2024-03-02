@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MiniBlog.Core.Contracts.Blogs.Queries;
 using MiniBlog.Core.RequestResponse.Blogs.Queries.GetById;
-using MiniBlog.Infra.Data.Sql.Queries.Common;
-using Zamin.Infra.Data.Sql.Queries;
+using MiniBlog.Infra.Data.Sqlite.Queries.Common;
+using Zamin.Infra.Data.Sqlite.Queries;
 
-namespace MiniBlog.Infra.Data.Sql.Queries.Blogs;
+namespace MiniBlog.Infra.Data.Sqlite.Queries.Blogs;
 
 public class BlogQueryRepository(MiniblogQueryDbContext dbContext) : BaseQueryRepository<MiniblogQueryDbContext>(dbContext), IBlogQueryRepository
 {

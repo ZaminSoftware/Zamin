@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using MiniBlog.Core.Domain.Blogs.Entities;
 
-namespace MiniBlog.Infra.Data.Sql.Commands.Blogs.Configs;
+namespace MiniBlog.Infra.Data.Sqlite.Commands.Blogs.Configs;
 
 public sealed class BlogPostConfig : IEntityTypeConfiguration<BlogPost>
 {

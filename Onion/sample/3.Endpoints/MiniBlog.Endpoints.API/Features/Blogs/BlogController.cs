@@ -8,7 +8,7 @@ using MiniBlog.Core.RequestResponse.Blogs.Commands.Update;
 using MiniBlog.Core.RequestResponse.Blogs.Queries.GetById;
 using Zamin.EndPoints.Web.Controllers;
 
-namespace MiniBlog.Endpoints.API.Blogs
+namespace MiniBlog.Endpoints.API.Features.Blogs
 {
     [Route("api/[controller]")]
     public class BlogController : BaseController

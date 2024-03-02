@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace MiniBlog.Infra.Data.Sql.Commands.Migrations
+namespace MiniBlog.Infra.Data.Sql.Commands._Migrations
 {
     /// <inheritdoc />
-    public partial class AddGenericEntityWithAudit : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -59,25 +59,6 @@ namespace MiniBlog.Infra.Data.Sql.Commands.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "People",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedByUserId = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    CreatedDateTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ModifiedByUserId = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    ModifiedDateTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    BusinessId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_People", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "BlogPost",
                 columns: table => new
                 {
@@ -117,9 +98,6 @@ namespace MiniBlog.Infra.Data.Sql.Commands.Migrations
             migrationBuilder.DropTable(
                 name: "OutBoxEventItems",
                 schema: "zamin");
-
-            migrationBuilder.DropTable(
-                name: "People");
 
             migrationBuilder.DropTable(
                 name: "Blogs");
