@@ -11,12 +11,16 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="..\..\..\..\icon.png" Pack="true" PackagePath=""/>
+		<None Include="..\..\..\..\..\icon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Zamin.Core.Domain\Zamin.Core.Domain.csproj" />
-		<ProjectReference Include="..\Zamin.Core.RequestResponse\Zamin.Core.RequestResponse.csproj" />
+		<PackageReference Include="Dapper" Version="2.1.28" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\2.Core\Zamin.Core.Contracts\Zamin.Core.Contracts.csproj" />
+		<ProjectReference Include="..\Zamin.Infra.Data.Sql\Zamin.Infra.Data.Sql.csproj" />
 	</ItemGroup>
 
 </Project>
