@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zamin.Extensions.ChangeData
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zamin.Extensions.ChangeDataLog.Hamster", "Zamin.Extensions.ChangeDataLog.Hamster\Zamin.Extensions.ChangeDataLog.Hamster.csproj", "{05F4059F-760B-4E64-A3BD-ECABE91E27FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zamin.Extensions.ChangeDataLog.Hamster.Sample", "Zamin.Extensions.ChangeDataLog.Hamster.Sample\Zamin.Extensions.ChangeDataLog.Hamster.Sample.csproj", "{27FB3276-3805-446E-9C1B-4A220769446A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zamin.Extensions.ChangeDataLog.Hamster.Sample", "Zamin.Extensions.ChangeDataLog.Hamster.Sample\Zamin.Extensions.ChangeDataLog.Hamster.Sample.csproj", "{27FB3276-3805-446E-9C1B-4A220769446A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

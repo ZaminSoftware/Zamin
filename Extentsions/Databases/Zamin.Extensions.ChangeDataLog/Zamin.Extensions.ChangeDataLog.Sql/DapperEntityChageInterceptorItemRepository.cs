@@ -6,6 +6,7 @@ using Zamin.Extensions.ChangeDataLog.Abstractions;
 using Zamin.Extensions.ChangeDataLog.Sql.Options;
 
 namespace Zamin.Extensions.ChangeDataLog.Sql;
+
 public class DapperEntityChageInterceptorItemRepository : IEntityChageInterceptorItemRepository
 {
     private readonly ChangeDataLogSqlOptions _options;
