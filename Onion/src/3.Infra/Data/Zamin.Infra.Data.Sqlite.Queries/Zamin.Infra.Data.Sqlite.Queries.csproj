@@ -15,7 +15,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Using Include="Microsoft.EntityFrameworkCore" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Dapper" Version="2.1.28" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -15,12 +15,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Zamin.Extensions.ChangeDataLog.Abstractions" Version="8.0.0" />
-		<PackageReference Include="Zamin.Extensions.UsersManagement.Abstractions" Version="8.0.0" />
+		<Using Include="Microsoft.EntityFrameworkCore" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Using Include="Microsoft.EntityFrameworkCore" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.2" />
+		<PackageReference Include="Zamin.Extensions.ChangeDataLog.Abstractions" Version="8.0.0" />
+		<PackageReference Include="Zamin.Extensions.UsersManagement.Abstractions" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>

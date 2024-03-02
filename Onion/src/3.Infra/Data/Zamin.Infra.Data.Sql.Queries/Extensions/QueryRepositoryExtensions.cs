@@ -3,7 +3,7 @@ using Zamin.Core.Contracts.ApplicationServices.Queries;
 using Zamin.Core.RequestResponse.Queries;
 using Zamin.Utilities.Extensions;
 
-namespace Zamin.Infra.Data.Sql.Queries;
+namespace Zamin.Infra.Data.Sql.Queries.Extensions;
 
 public static class QueryRepositoryExtensions
 {

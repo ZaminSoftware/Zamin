@@ -14,13 +14,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Dapper" Version="2.1.28" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
-		<PackageReference Include="Zamin.Extensions.Serializers.Abstractions" Version="8.0.0" />
+		<Using Include="Microsoft.EntityFrameworkCore" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Using Include="Microsoft.EntityFrameworkCore" />
+		<PackageReference Include="Dapper" Version="2.1.28" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
+		<PackageReference Include="Zamin.Extensions.Serializers.Abstractions" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
