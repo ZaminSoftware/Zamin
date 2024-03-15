@@ -2,14 +2,17 @@
 
 public interface IUserInfoService
 {
-    string GetUserAgent();
-    string GetUserIp();
-    string UserId();
+    string GetUserId();
+    string GetUserName();
     string GetFirstName();
     string GetLastName();
-    string GetUsername();
+    string UserAgent();
+    string GetUserIp();
+    string GetClientId();
+    bool TrueIfCurrentUser(string userId);
     string? GetClaim(string claimType);
-    bool IsCurrentUser(string userId);
+    [Obsolete("UserIdOrDefault will be remove in next version")]
     string UserIdOrDefault();
+    [Obsolete("UserIdOrDefault will be remove in next version")]
     string UserIdOrDefault(string defaultValue);
 }
